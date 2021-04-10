@@ -1,0 +1,419 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+body {
+    font-family: 'Cuprum', sans-serif;
+    height: 100vh;
+    background-size: cover;
+    transition: background-image .7s ease-in-out;
+    color: #fff;  
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+.user-info {
+    margin-top: 6rem;
+    max-width: 40rem;
+    width:50%;
+    background-color: rgba(0,0,0, .5);
+    border-radius:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+
+.user-info .button-random,
+.user-info .button-show {
+    margin-bottom: 1rem;
+    width: 150px;
+    height: 50px;
+    background-color:rgba(255,255,255, .5);
+    border-radius: 0px 15px 0px 15px;
+    color: #000;
+    border: none;
+    outline: none;
+    top: 0;
+    left: 5px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.user-info .button-show {
+    top: 0px;
+    left: 160px;
+    border-radius: 15px 0px 15px 0px;
+}
+
+.user-info .button-random:hover {
+    background-color:rgba(255,255,255, .8);
+    border-radius: 15px 0px 15px 0px;
+    transition: .5s ease;
+}
+
+.user-info .button-show:hover {
+    background-color:rgba(255,255,255, .8);
+    border-radius: 0px 15px 0px 15px;
+    transition: .5s ease;
+}
+
+.user-info .time {
+    font-size: 8rem;
+    color:#fff;
+    font-weight: 700;
+}
+
+.user-info .date {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.user-info .about-user {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.user-info .about-user .greeting {
+    display: block;
+}
+.user-info .about-user .name {
+    min-width: 9rem;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.user-info .focus-text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-info .focus {
+    font-size: 2rem;
+    min-width: 20rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.weather-section {
+    width: 16rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0,0,0, .5);
+    border-radius: 1rem;
+}
+
+.weather-section .city {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase; 
+}
+
+.weather-section .icon {
+    width: 5rem;
+    height: 5rem;
+}
+.weather-section .icon img {
+    width: 100%;
+}
+
+
+.weather-section .city-info,
+.weather-section .temp,
+.weather-section .humidity,
+.weather-section .wind {
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.quote-section {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+.quote-section .quote {
+    max-width: 20rem;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+    padding: 0.4rem;
+    border-radius: 1em;
+    opacity: 0.8;
+}
+blockquote,
+figcaption {
+    font-size: 1.2rem;
+}
+
+.quote-section .quote figcaption,
+.quote-section .quote blockquote {
+    margin: 0.5rem;
+}
+.quote-section .quote figcaption {
+    text-align: right;
+}
+.quote-section .btn {
+    background-color: rgba(0,0,0, .5);
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.quote-section .btn:hover {
+    background-color: rgba(0,0,0, .8);
+    border-radius: 20px;
+    transition: .5s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .user-info {
+         margin-top: 10rem;
+         width: 46%;
+    }
+    .user-info .time {
+        font-size: 6rem;
+    }
+
+    .user-info .date {
+        font-size: 2rem;
+    }
+
+    .user-info .about-user .name {
+        min-width: 7rem;
+    }
+
+    .user-info .focus-text {
+        font-size: 2rem;
+    }
+
+    .user-info .focus {
+        font-size: 2rem;
+    }
+
+    .quote-section .quote {
+        width: 18rem;
+    }
+    .user-info .about-user {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    .weather-section .city {
+        font-size: 2rem;
+    }
+    
+    .weather-section .city-info, 
+    .weather-section .temp, 
+    .weather-section .humidity, 
+    .weather-section .wind {
+        font-size: 1.5rem;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .user-info .about-user .name {
+    min-width: 7rem;
+}
+    .user-info .time {
+        font-size: 5rem;
+    }
+    .quote-section .quote {
+        width: 14rem;
+    }
+    .weather-section {
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .user-info {
+         width: 53%;
+        margin-top: 22%;
+    }
+    .user-info .time {
+        font-size: 4rem;
+    }
+
+    .user-info .date {
+        font-size: 1.5rem;
+    }
+
+    .user-info .about-user {
+        font-size: 1.5rem;
+    }
+
+    .user-info .focus-text {
+        font-size: 1.5rem;
+    }
+
+    .user-info .focus {
+        font-size: 1.5rem;
+        min-width: 10rem;
+    }
+
+    .quote-section .quote {
+        width: 34rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+    }
+
+    figcaption {
+        font-size: 0.9rem;
+    }
+    .user-info .about-user {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .weather-section {
+        width: 10rem;
+    }
+
+    .weather-section .city {
+        font-size: 1.5rem;
+    }
+    
+    .weather-section .city-info, 
+    .weather-section .temp, 
+    .weather-section .humidity, 
+    .weather-section .wind {
+        font-size: 1rem;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 650px) {
+     .user-info {
+        margin-top: 15%;
+         width: 55%;
+    }
+    .user-info .time {
+        font-size: 3rem;
+    }
+    .user-info .about-user {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    .user-info .date {
+        font-size: 1rem;
+    }
+
+    .user-info .focus-text {
+        font-size: 1rem;
+    }
+
+    .weather-section .icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    .weather-section .icon img {
+        width: 100%;
+    }
+
+    .weather-section {
+        width: 6rem;
+    }
+    .user-info .button-random,
+    .user-info .button-show {
+        width: 95px;
+    }
+    .quote-section .btn {
+        width: 5rem;
+        height: 3rem;
+    }
+    blockquote {
+        font-size: 0.9rem;
+    }
+    .quote-section .quote {
+        width: 19rem;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .quote-section .quote {
+        padding: 0;
+    }
+    .quote-section .quote {
+        width: 15rem;
+    }
+    .user-info {
+        width: 74%;
+        margin-top: 18%;
+    }
+
+    .user-info .time {
+        font-size: 2rem;
+    }
+    .user-info .about-user {
+        width: 10rem;
+        margin-bottom: 1rem;
+    }
+    .user-info .about-user .name {
+        min-width: 10rem;
+    }
+    .quote-section {
+        bottom: 0;
+        left: 0;
+    }
+    .quote-section .quote {
+        width: 16rem;
+    }
+    
+     .weather-section {
+         width: 19rem;
+         flex-direction: row;
+    }
+     .weather-section .city {
+         font-size: 1.2rem;
+         margin: auto 1px;
+         width: 78%;
+    }
+     .weather-section .temp{
+           font-size: 0.9rem;
+        margin: auto 3px;
+    }
+    .weather-section .icon{
+         width: 3rem;
+        height: 3rem;
+            margin: auto 3px;
+    }
+    .icon, .humidity, .wind {
+          font-size: 0.9rem;
+        margin: auto 3px;
+    }
+}

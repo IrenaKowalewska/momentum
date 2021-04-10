@@ -1,6 +1,6 @@
 ## Task [RS School](https://rs.school/) Momentum
 
-![screenshot]()
+![screenshot](https://github.com/IrenaKowalewska/momentum/blob/main/assets/momentum.png)
 
 [Deploy Momentum](https://rolling-scopes-school.github.io/irenakowalewska-JS2020Q3/momentum/)
 
